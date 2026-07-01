@@ -56,17 +56,17 @@
 
 ### 编译 & 烧录
 
-\\\ash
+pash-
 git clone https://github.com/YYi662/esp32_table_car.git
-cd esp32_table_car
-pio run --target upload
-\\\
+ cd esp32_table_car
+ pio run --target upload
+
 
 项目会自动从 PlatformIO 库安装依赖 olikraus/U8g2（OLED 驱动）。
 
 ### 配套手机 App
 
-项目根目录附带 pp-debug.apk，安装到 Android 手机后通过 WiFi 热点控制小车。
+项目根目录附带 app-debug.apk，安装到 Android 手机后通过 WiFi 热点控制小车。
 
 ---
 
