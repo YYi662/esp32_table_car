@@ -7,7 +7,7 @@
 ![OLED](https://img.shields.io/badge/OLED-SSD1306-00FF00?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)
 
-**一个基于 ESP32 的桌面智能小车，具备 AI 自主行为、WiFi 遥控、OLED 表情动画等能力。**
+**一个基于 ESP32 的桌面智能小车，具备 自主行为、WiFi 遥控、OLED 表情动画等能力。**
 
 </div>
 
@@ -17,12 +17,12 @@
 
 | 功能 | 说明 |
 |------|------|
-| 🧠 **AI 自主行为** | 模拟生物动机系统（舒适欲/探索欲/焦躁欲），自主决策行为与表情 |
-| 📱 **WiFi 遥控** | ESP32 开热点，手机 UDP 连接，实时操控小车运动 |
-| 👆 **触摸交互** | 电容触摸传感器，支持短按/长按，切换工作模式 |
-| 🖥️ **OLED 表情屏** | 128×64 像素，多种表情、图标、逐帧动画 |
-| 😴 **睡眠节能** | 15 秒无操作自动入睡，触摸唤醒 |
-| ⚡ **低功耗设计** | WiFi 功率限制为 2dBm，降低热点功耗 |
+| **自主行为** | 模拟生物动机系统（舒适欲/探索欲/焦躁欲），自主决策行为与表情 |
+| **WiFi 遥控** | ESP32 开热点，手机 UDP 连接，实时操控小车运动 |
+| **触摸交互** | 电容触摸传感器，支持短按/长按，切换工作模式 |
+| **OLED 表情屏** | 128×64 像素，多种表情、图标、逐帧动画 |
+| **睡眠节能** | 15 秒无操作自动入睡，触摸唤醒 |
+| **低功耗设计** | WiFi 功率限制为 2dBm，降低热点功耗 |
 
 ---
 
@@ -56,10 +56,10 @@
 
 ### 编译 & 烧录
 
-pash-
-git clone https://github.com/YYi662/esp32_table_car.git
- cd esp32_table_car
- pio run --target upload
+pash
+ - git clone https://github.com/YYi662/esp32_table_car.git
+  - cd esp32_table_car
+  - pio run --target upload
 
 
 项目会自动从 PlatformIO 库安装依赖 olikraus/U8g2（OLED 驱动）。
@@ -73,7 +73,7 @@ git clone https://github.com/YYi662/esp32_table_car.git
 
 ---
 
-## AI 行为系统
+##  探索行为系统
 
 ### 三层动机模型
 
@@ -110,13 +110,13 @@ git clone https://github.com/YYi662/esp32_table_car.git
 
 | 指令 | 动作 | 说明 |
 |------|------|------|
-| F | 前进 | 双电机正转 |
-| B | 后退 | 双电机反转 |
-| L | 左转 | A 正 B 反 |
-| R | 右转 | A 反 B 正 |
-| 60 | 调速 | 设置速度为 60 |
-| 80 | 调速 | 设置速度为 80 |
-| 79 | 退出 | 返回桌面模式 |
+| 前进 | 前进 | 双电机正转 |
+| 后退 | 后退 | 双电机反转 |
+| 左转 | 左转 | A 正 B 反 |
+| 右转 | 右转 | A 反 B 正 |
+| 速度 | 调速 | 设置速度为 60\80 |
+| F1 | 退出 | 返回桌面模式 |
+| F3 | 切换 | 切换为探索模式 |
 
 ---
 
